@@ -6,7 +6,7 @@ import { Mail, Github, Linkedin, Sun, Moon, Heart } from 'lucide-react';
 export default function Contact() {
 const socials = [
 	{ name: 'GitHub', url: 'https://github.com/1rubiz', icon: <Github className="w-5 h-5" /> },
-	{ name: 'LinkedIn', url: 'https://linkedin.com/in/', icon: <Linkedin className="w-5 h-5" /> },
+	{ name: 'LinkedIn', url: 'https://linkedin.com/in/izekor-ruby', icon: <Linkedin className="w-5 h-5" /> },
 ];
 
 	const [theme, setTheme] = useState<'light' | 'dark'>("light");
@@ -17,6 +17,11 @@ const socials = [
 	function handleThemeToggle() {
 		setTheme(t => (t === 'light' ? 'dark' : 'light'));
 		document.documentElement.classList.toggle('dark');
+	}
+
+	function setDarkMode() {
+		setTheme('dark');
+		document.documentElement.classList.add('dark');
 	}
 
 	function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
@@ -40,16 +45,17 @@ const socials = [
 	const mailtoUrl = `mailto:${to}?subject=${subject}&body=${body}`;
 
     useEffect(() => {
-        document.documentElement.classList.toggle('dark');
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setDarkMode();
     }, []);
 
 	return (
 		<section id="contact" className="relative flex flex-col items-center py-24 px-6 bg-gradient-to-b from-background via-muted/10 to-background">
 			<div className="max-w-lg w-full mx-auto text-center mb-16">
 				<span className="inline-block px-4 py-2 rounded-full bg-muted/50 backdrop-blur-sm text-sm font-medium text-muted-foreground border border-border/50 mb-4">
-					Contact (Soft Close)
+					Contact
 				</span>
-				<h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-2 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent">
+				<h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-2 bg-gradient-to-r from-purple-600 via-green-600 to-green-600 bg-clip-text text-transparent">
 					Let’s Connect
 				</h2>
 				<p className="text-lg text-muted-foreground mb-6">I’d love to hear from you. Reach out for work, collaboration, or just to say hi!</p>
@@ -105,7 +111,7 @@ const socials = [
 					<motion.button
 						type="submit"
 						whileHover={{ scale: 1.04 }}
-						className="px-6 py-2 rounded-full bg-purple-600 text-white font-semibold shadow-md transition-all hover:bg-purple-700 focus:outline-none"
+						className="px-6 py-2 rounded-full bg-green-700 text-white font-semibold shadow-md transition-all hover:bg-purple-700 focus:outline-none"
 					>
 						{sent ? 'Sent!' : 'Send Message'}
 					</motion.button>

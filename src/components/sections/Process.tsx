@@ -31,9 +31,9 @@ export default function Process() {
 			<div className="max-w-4xl w-full mx-auto">
 				<div className="text-center mb-12">
 					<span className="inline-block px-4 py-2 rounded-full bg-muted/50 backdrop-blur-sm text-sm font-medium text-muted-foreground border border-border/50 mb-4">
-						Process / Philosophy (Elite Differentiator)
+						Process / Philosophy
 					</span>
-					<h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-2 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent">
+					<h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-2 bg-gradient-to-r from-purple-600 via-green-600 to-green-600 bg-clip-text text-transparent">
 						How I Think
 					</h2>
 					<p className="text-lg text-muted-foreground max-w-2xl mx-auto">

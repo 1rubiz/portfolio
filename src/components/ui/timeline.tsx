@@ -1,6 +1,6 @@
 "use client";
 import {
-  useMotionValueEvent,
+  // useMotionValueEvent,
   useScroll,
   useTransform,
   motion,
@@ -37,13 +37,24 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
+      {/* <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
           Changelog from my journey
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
           I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
           a timeline of my journey.
+        </p>
+      </div> */}
+      <div className="text-center mb-12">
+        <span className="inline-block px-4 py-2 rounded-full bg-muted/50 backdrop-blur-sm text-sm font-medium text-muted-foreground border border-border/50 mb-4">
+          Experience / Timeline
+        </span>
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-2 bg-linear-to-r from-purple-600 via-green-600 to-green-600 bg-clip-text text-transparent">
+          Featured Projects
+        </h2>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          Credibility through real impact. Here’s what I’ve shipped and improved.
         </p>
       </div>
 

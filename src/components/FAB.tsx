@@ -1,10 +1,12 @@
-import { BlocksIcon, BrainCircuit, BriefcaseBusiness, Network, UserCircle } from "lucide-react"
+import { BlocksIcon, BrainCircuit, BriefcaseBusiness, UserCircle } from "lucide-react"
+import { scrollTo } from "@/lib/scrollTo"
+import { IconMenu3 } from "@tabler/icons-react"
 
 function FAB() {
   return (
     <div className=" md:hidden fab fab-flower">
         {/* a focusable div with tabIndex is necessary to work on all browsers. role="button" is necessary for accessibility */}
-        <div tabIndex={0} role="button" className="btn btn-lg btn-info btn-circle"><Network/></div>
+        <div tabIndex={0} role="button" className="btn btn-lg btn-info btn-circle"><IconMenu3 /></div>
 
         {/* Main Action button replaces the original button when FAB is open */}
         <div className="fab-close">
@@ -12,16 +14,16 @@ function FAB() {
         </div>
 
         {/* buttons that show up when FAB is open */}
-        <div className="tooltip tooltip-left" data-tip="About">
+        <div onClick={()=> scrollTo('about')} className="tooltip tooltip-left" data-tip="About">
             <button className="btn btn-lg btn-circle"><UserCircle /></button>
         </div>
-        <div className="tooltip tooltip-left" data-tip="Projects">
+        <div onClick={()=> scrollTo('projects')} className="tooltip tooltip-left" data-tip="Projects">
             <button className="btn btn-lg btn-circle"><BlocksIcon/></button>
         </div>
-        <div className="tooltip" data-tip="Skills">
+        <div onClick={()=> scrollTo('skills')} className="tooltip" data-tip="Skills">
             <button className="btn btn-lg btn-circle"><BrainCircuit/></button>
         </div>
-        <div className="tooltip" data-tip="Experience">
+        <div onClick={()=> scrollTo('experience')} className="tooltip" data-tip="Experience">
             <button className="btn btn-lg btn-circle"><BriefcaseBusiness/></button>
         </div>
     </div>

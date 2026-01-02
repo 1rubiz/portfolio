@@ -5,61 +5,65 @@ import { Layers, Code2, MonitorSmartphone } from 'lucide-react';
 // Example project data structure
 const projects = [
 	{
-		name: 'Acme Analytics',
+		name: 'Weeshr',
 		featured: true,
-		problem: 'Real-time data dashboards for non-technical users.',
-		tech: ['React', 'Node.js', 'TailwindCSS', 'PostgreSQL'],
-		result: 'Adoption by 3 enterprise clients, 40% faster reporting.',
+		role: 'Frontend Developer',
+		problem: 'Real-time data dashboards for admins and vendors.',
+		tech: ['Vue.js', 'TailwindCSS', 'ShadcnUI', 'Pinia', 'Responsive Design'],
+		result: 'Built a scalable dashboard used by 10,000+ users, increasing user engagement by 30%',
 		caseStudy: {
-			problem: 'Business users struggled to get insights from raw data exports.',
-			constraints: 'Legacy backend, strict security, tight deadline.',
-			decisions: 'Built modular React UI, used serverless for scale, prioritized UX.',
-			outcome: 'Launched MVP in 6 weeks, reduced support tickets by 60%.',
-			improve: 'Add more self-serve analytics and AI-driven insights.'
+			one: 'Built a scalable dashboard used by 10,000+ users, increasing user engagement by 30%',
+			'two': 'Implemented user authentication and role-based access control.',
+			'three': 'Built interactive data visualizations using Chart.js.',
+			'four': 'Optimized frontend performance, reducing load times by 40%.',
 		}
 	},
 	{
-		name: 'DevMatch',
+		name: 'Remote',
 		featured: true,
-		problem: 'Matching developers to open source projects by skill.',
-		tech: ['Vue', 'Express', 'MongoDB'],
-		result: 'Matched 500+ devs, increased project contributions by 30%.',
+		role: 'Full Stack Software Developer ',
+		problem: 'Subscription reminders and stock management for small businesses.',
+		tech: ['Nextjs', 'Shadcn', 'Supabase', 'Python', 'SQLite'],
+		result: 'Automated 15-33 daily WhatsApp reminders for subscription renewals using Supabase cron jobs.',
 		caseStudy: {
-			problem: 'Open source maintainers struggled to find contributors.',
-			constraints: 'Limited budget, global user base.',
-			decisions: 'Used Vue for fast prototyping, built REST API, focused on onboarding.',
-			outcome: 'Community grew 2x in 3 months.',
-			improve: 'Add gamification and better notifications.'
+			'one': 'Reduced browser lag by 30%-40% with a Python proxy server for large Excel operations.',
+			'two': 'Automated 15-33 daily WhatsApp reminders for subscription renewals using Supabase cron jobs.',
+			'three': 'Implemented transaction validation and audit logging for stock management, ensuring data consistency.',
+			'four': 'Chained table data using foreign keys, reducing redundant database queries and improving API performance.',
+			'five': 'Assisted in database design and management using SQL for data storage solutions.',
 		}
 	},
 	{
-		name: 'Portfolio V2',
-		featured: false,
-		problem: 'Personal site to showcase projects and writing.',
-		tech: ['Next.js', 'TailwindCSS'],
-		result: 'Improved recruiter response rate, 2x more interview invites.',
+		name: 'Remote',
+		featured: true,
+		role: 'Software Engineer',
+		problem: 'Local first record system for academic institutions.',
+		tech: ['Next.js', 'TailwindCSS', 'Electron', 'SQLite', 'GitHub Releases'],
+		result: 'Developed an academic record system Desktop Application using Electron, Nextjs and Sqlite.',
 		caseStudy: {
-			problem: 'Old site was slow and hard to update.',
-			constraints: 'Solo project, mobile-first needed.',
-			decisions: 'Migrated to Next.js, used MDX for content.',
-			outcome: 'Site loads in <1s, easy to add new posts.',
-			improve: 'Add blog search and dark mode toggle.'
+			'one': 'Developed an academic record system Desktop Application using Electron, Nextjs and Sqlite.',
+			'two': 'Implemented GitHub releases for Windows, Linux and MacOS.',
+			'three': 'Designed database to store application data using SQLite3.',
 		}
 	},
-	{
-		name: 'API Gateway',
-		featured: false,
-		problem: 'Unified API for multiple microservices.',
-		tech: ['NestJS', 'TypeScript', 'Redis'],
-		result: 'Reduced integration time for new clients by 50%.',
-		caseStudy: {
-			problem: 'Clients needed to integrate with 5+ services.',
-			constraints: 'High throughput, zero downtime.',
-			decisions: 'Used NestJS for structure, Redis for caching.',
-			outcome: 'Stable, scalable gateway in production.',
-			improve: 'Add GraphQL support.'
-		}
-	},
+	// {
+	// 	name: 'API Gateway',
+	// 	featured: false,
+	// 	problem: 'Unified API for multiple microservices.',
+	// 	tech: ['NestJS', 'TypeScript', 'Redis'],
+	// 	result: 'Reduced integration time for new clients by 50%.',
+	// 	caseStudy: {
+	// 		'one': '',
+	// 		'two': '',
+	// 		'three': '',
+	// 		'four': '',
+	// 		// problem: 'Clients needed to integrate with 5+ services.',
+	// 		// constraints: 'High throughput, zero downtime.',
+	// 		// decisions: 'Used NestJS for structure, Redis for caching.',
+	// 		// outcome: 'Stable, scalable gateway in production.',
+	// 		// improve: 'Add GraphQL support.'
+	// 	}
+	// },
 ];
 
 export default function Projects() {
@@ -70,14 +74,14 @@ export default function Projects() {
 	const others = projects.filter(p => !p.featured);
 
 	return (
-		<section id="projects" className="relative min-h-screen flex flex-col items-center py-24 px-6 bg-gradient-to-b from-background via-muted/10 to-background">
+		<section id="experience" className="relative flex flex-col items-center py-24 px-6 bg-linear-to-b from-background via-muted/10 to-background">
 			<div className="max-w-5xl w-full mx-auto">
 				<div className="text-center mb-12">
 					<span className="inline-block px-4 py-2 rounded-full bg-muted/50 backdrop-blur-sm text-sm font-medium text-muted-foreground border border-border/50 mb-4">
-						Projects / Case Studies (This Is the Crown Jewel)
+						Projects / Case Studies
 					</span>
-					<h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-2 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent">
-						Featured Projects
+					<h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-2 bg-linear-to-r from-purple-600 via-green-600 to-green-600 bg-clip-text text-transparent">
+						My Experiences
 					</h2>
 					<p className="text-lg text-muted-foreground max-w-2xl mx-auto">
 						Proving I can ship, think, and finish. Click a card for a deep dive.
@@ -195,11 +199,11 @@ export default function Projects() {
 											</div>
 											<div className="mb-6 text-sm text-foreground/90 font-medium">{proj.result}</div>
 											<div className="space-y-3 text-sm">
-												<div><span className="font-semibold">Problem:</span> {proj.caseStudy.problem}</div>
-												<div><span className="font-semibold">Constraints:</span> {proj.caseStudy.constraints}</div>
-												<div><span className="font-semibold">Decisions:</span> {proj.caseStudy.decisions}</div>
-												<div><span className="font-semibold">Outcome:</span> {proj.caseStudy.outcome}</div>
-												<div><span className="font-semibold">What I’d improve:</span> {proj.caseStudy.improve}</div>
+												<div><span className="font-semibold">1:</span> {proj.caseStudy.one}</div>
+												<div><span className="font-semibold">2:</span> {proj.caseStudy.two}</div>
+												<div><span className="font-semibold">3:</span> {proj.caseStudy.three}</div>
+												{proj.caseStudy.four && <div><span className="font-semibold">4:</span> {proj.caseStudy.four}</div>}
+												{proj.caseStudy.five && <div><span className="font-semibold">5:</span> {proj.caseStudy.five}</div>}
 											</div>
 										</div>
 									);
@@ -210,15 +214,7 @@ export default function Projects() {
 				</AnimatePresence>
 			</div>
 			{/* Subtle bottom gradient fade */}
-			<div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+			<div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-background to-transparent pointer-events-none" />
 		</section>
 	);
 }
-
-// https://www.trinitydsl.com/
-// https://project-fx-teal.vercel.app/
-// https://property-management-blue.vercel.app/
-// https://hemify.vercel.app/
-// ellies-omega.vercel.app
-// https://project-3rs.vercel.app/
-// https://aed-fe.vercel.app/

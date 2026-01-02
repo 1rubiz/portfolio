@@ -1,11 +1,10 @@
-
-"use client";
-
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowRight, Mail } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { ContainerTextFlip } from "@/components/ui/container-text-flip";
+// import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import { Spotlight } from "../ui/spotlight";
+import { scrollTo } from "@/lib/scrollTo";
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
@@ -85,7 +84,7 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "url('data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg\'%3E%3Cfilter id=\\'noiseFilter\\'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter=\\'url(%23noiseFilter)\\'/%3E%3C/svg%3E')",
+              "url('data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg\\'%3E%3Cfilter id=\\'noiseFilter\\'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter=\\'url(%23noiseFilter)\\'/%3E%3C/svg%3E')",
           }}
         />
       </div>
@@ -142,19 +141,23 @@ export default function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate={mounted ? "visible" : "hidden"}
-        className="relative z-10 max-w-5xl mx-auto px-6 text-center"
+        className="relative z-10 mx-auto px-6 text-center"
       >
         {/* Greeting text */}
-        <motion.div variants={itemVariants} className="mb-6">
-          <span className="inline-block px-4 py-2 rounded-full bg-muted/50 backdrop-blur-sm text-sm font-medium text-muted-foreground border border-border/50">
-            👋 Available for opportunities
-          </span>
-        </motion.div>
+        <div className="w-full">
+          <ContainerTextFlip
+          words={["Meet", "Collaborate with", "Hire",]}
+        />
+        </div>
         {/* Main heading with staggered reveal */}
-        <motion.h1
+        <div className="flex items-center justify-center">
+          {/* <TextHoverEffect text="RUBY IZEKOR" /> */}
+          <h1 className="bg-linear-to-r text-[2.7rem]/loose md:text-[10rem] font-serif font-bold from-black to-black md:from-purple-600 md:via-green-500 md:to-gray-700 bg-clip-text text-transparent">RUBY IZEKOR</h1>
+        </div>
+        {/* <motion.h1
           variants={itemVariants}
           className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight"
-        >
+        }>
           <span className="bg-gradient-to-br from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
             Crafting Digital
           </span>
@@ -162,13 +165,13 @@ export default function Hero() {
           <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-orange-600 bg-clip-text text-transparent">
             Experiences
           </span>
-        </motion.h1>
+        </motion.h1> */}
         {/* One-line positioning */}
         <motion.p
           variants={itemVariants}
-          className="text-xl md:text-2xl font-bold text-muted-foreground mb-12 max-w-2xl mx-auto"
+          className="text-xl md:text-2xl font-bold md:text-muted-foreground mb-12 max-w-4xl mx-auto"
         >
-          Full-stack developer specializing in building exceptional digital products with modern technologies
+          Software Engineer specializing in building exceptional web, mobile and desktop applications<span className="hidden md:inline">, with backend that scales vertically and horizontally using modern technologies and up to date architectures.</span>
         </motion.p>
         {/* CTA Buttons */}
         <motion.div
@@ -176,30 +179,30 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           {/* Primary CTA */}
-          <motion.a
-            href="#portfolio"
+          <motion.div
+            onClick={() => scrollTo("projects")}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.98 }}
-            className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-full bg-foreground text-background font-medium overflow-hidden transition-all hover:shadow-2xl hover:shadow-foreground/20"
+            className="group cursor-pointer relative inline-flex items-center gap-2 px-8 py-4 rounded-full bg-foreground text-background font-medium overflow-hidden transition-all hover:shadow-2xl hover:shadow-foreground/20"
           >
             <span className="relative z-10">View Portfolio</span>
             <ArrowRight className="w-5 h-5 relative z-10 transition-transform group-hover:translate-x-1" />
             {/* Animated gradient overlay */}
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity"
+              className="absolute inset-0 bg-linear-to-r from-purple-600 via-pink-600 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity"
               initial={false}
             />
-          </motion.a>
+          </motion.div>
           {/* Secondary CTA */}
-          <motion.a
-            href="#contact"
+          <motion.div
+            onClick={()=> scrollTo('contact')}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.98 }}
-            className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-muted/50 backdrop-blur-sm text-foreground font-medium border border-border/50 hover:border-border transition-all hover:shadow-xl hover:bg-muted/70"
+            className="group cursor-pointer inline-flex items-center gap-2 px-8 py-4 rounded-full bg-muted/50 backdrop-blur-sm text-foreground font-medium border border-border/50 hover:border-border transition-all hover:shadow-xl hover:bg-muted/70"
           >
             <Mail className="w-5 h-5 transition-transform group-hover:rotate-12" />
             <span>Get in Touch</span>
-          </motion.a>
+          </motion.div>
         </motion.div>
         {/* Scroll indicator */}
         <motion.div

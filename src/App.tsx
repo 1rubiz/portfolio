@@ -4,20 +4,23 @@ import './App.css'
 import Skill from './components/sections/Skill'
 import Projects from './components/sections/Projects'
 import Process from './components/sections/Process'
-import Experience from './components/sections/Experience'
+// import Experience from './components/sections/Experience'
 import Contact from './components/sections/Contact'
 import { TimelineDemo } from './components/sections/TimeLine'
 import FAB from './components/FAB'
+import GitHubHeroSection from './components/sections/GithubHeroSection'
+import { NavbarComp } from './components/Nav'
 
 function App() {
   return (
-    <div className="min-h-screen w-screen">
+    <div id='home' className="min-h-screen max-w-screen scroll-smooth">
+      <NavbarComp/>
       <Hero />
+      <GitHubHeroSection username={'1rubiz'}/>
       <About />
       <Skill/>
       <Projects/>
       <Process/>
-      <Experience/>
       <TimelineDemo/>
       <Contact/>
       <FAB/>

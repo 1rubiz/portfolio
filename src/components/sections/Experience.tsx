@@ -4,21 +4,25 @@ import { Briefcase, Star, TrendingUp } from 'lucide-react';
 // Dynamic experience array
 const experiences = [
 	{
-		role: 'Full Stack Developer',
-		company: 'Acme Corp',
-		impact: 'Built a scalable dashboard used by 1,000+ users, reducing manual reporting by 80%.',
+		role: 'Frontend Developer',
+		company: 'WEESHR',
+		impact: 'Built a scalable dashboard used by 10,000+ users, increasing user engagement by 30%',
 		icon: <Briefcase className="w-7 h-7 text-purple-500" />,
 	},
 	{
-		role: 'Backend Engineer',
-		company: 'DevMatch',
-		impact: 'Designed and shipped a matching algorithm that increased user engagement by 30%.',
+		role: 'Full Stack Engineer',
+		company: 'Remote',
+		impact: `Developed an academic record system Desktop Application using Electron, Nextjs and Sqlite.
+		 Implemented GitHub releases for Windows, Linux and MacOS`,
 		icon: <TrendingUp className="w-7 h-7 text-blue-500" />,
 	},
 	{
-		role: 'Open Source Contributor',
-		company: 'Various Projects',
-		impact: 'Contributed to popular libraries, improving performance and documentation for the community.',
+		role: 'Full Stack Software Developer',
+		company: 'Remote',
+		impact: `Reduced browser lag by 30%-40% with a Python proxy server for large Excel
+operations.
+Automated 15-33 daily WhatsApp reminders for subscription renewals using
+Supabase cron jobs.`,
 		icon: <Star className="w-7 h-7 text-yellow-400" />,
 	},
 ];
@@ -31,7 +35,7 @@ export default function Experience() {
 					<span className="inline-block px-4 py-2 rounded-full bg-muted/50 backdrop-blur-sm text-sm font-medium text-muted-foreground border border-border/50 mb-4">
 						Experience / Timeline
 					</span>
-					<h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-2 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent">
+					<h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-2 bg-gradient-to-r from-purple-600 via-green-600 to-green-600 bg-clip-text text-transparent">
 						My Experience
 					</h2>
 					<p className="text-lg text-muted-foreground max-w-2xl mx-auto">

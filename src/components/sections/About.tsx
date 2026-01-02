@@ -1,9 +1,6 @@
-'use client';
-
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Code2, Sparkles, Zap } from 'lucide-react';
-import { PixelatedCanvas } from '../ui/pixelated-canvas';
 
 export default function About() {
     const sectionRef = useRef<HTMLElement>(null);
@@ -73,7 +70,7 @@ export default function About() {
         <section
             ref={sectionRef}
             id="about"
-            className="relative min-h-screen flex items-center py-24 px-6 overflow-hidden bg-gradient-to-b from-background via-muted/10 to-background"
+            className="relative min-h-screen flex items-center py-24 px-6 overflow-hidden bg-linear-to-b from-background via-muted/10 to-background"
         >
             {/* Background decoration */}
             <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
@@ -96,11 +93,11 @@ export default function About() {
                                 About Me
                             </span>
                             <h2 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">
-                                <span className="bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                                <span className="bg-linear-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
                                     Building with
                                 </span>
                                 <br />
-                                <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent">
+                                <span className="bg-linear-to-r from-purple-600 via-green-600 to-green-600 bg-clip-text text-transparent">
                                     Purpose & Passion
                                 </span>
                             </h2>
@@ -145,7 +142,7 @@ export default function About() {
                     {/* Visual Element - Abstract 3D Floating Cards */}
                     <motion.div
                         variants={visualVariants}
-                        className="relative h-[600px] flex items-center justify-center"
+                        className="relative h-150 flex items-center justify-center"
                     >
                         <motion.div
                             style={{ y: visualY, rotateY: visualRotate, scale: visualScale }}
@@ -165,13 +162,13 @@ export default function About() {
                                         repeat: Infinity,
                                         ease: "easeInOut",
                                     }}
-                                    className="absolute w-72 h-96 rounded-2xl bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-orange-500/20 backdrop-blur-xl border border-white/10 shadow-2xl"
+                                    className="absolute w-72 h-96 rounded-2xl bg-linear-to-br from-purple-500/20 via-pink-500/20 to-orange-500/20 backdrop-blur-xl border border-white/10 shadow-2xl"
                                     style={{
                                         transform: 'translateZ(-100px) rotateY(-15deg)',
                                         transformStyle: 'preserve-3d',
                                     }}
                                 >
-                                    <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-transparent rounded-2xl" />
+                                    <div className="absolute inset-0 bg-linear-to-br from-purple-600/10 to-transparent rounded-2xl" />
                                 </motion.div>
 
                                 {/* Card 2 - Middle */}
@@ -186,18 +183,18 @@ export default function About() {
                                         repeat: Infinity,
                                         ease: "easeInOut",
                                     }}
-                                    className="absolute w-80 h-[420px] rounded-2xl bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-teal-500/20 backdrop-blur-xl border border-white/10 shadow-2xl"
+                                    className="absolute w-80 h-105 rounded-2xl bg-linear-to-br from-blue-500/20 via-cyan-500/20 to-teal-500/20 backdrop-blur-xl border border-white/10 shadow-2xl"
                                     style={{
                                         transform: 'translateZ(0px)',
                                         transformStyle: 'preserve-3d',
                                     }}
                                 >
-                                    <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent rounded-2xl" />
+                                    <div className="absolute inset-0 bg-linear-to-br from-blue-600/10 to-transparent rounded-2xl" />
 
                                     {/* Content overlay */}
                                     <div className="absolute inset-0 p-8 flex flex-col justify-between">
                                         <div className="space-y-4">
-                                            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 opacity-50" />
+                                            <div className="w-16 h-16 rounded-full bg-linear-to-br from-purple-500 to-pink-500 opacity-50" />
                                             <div className="space-y-2">
                                                 <div className="h-3 w-3/4 bg-white/20 rounded" />
                                                 <div className="h-3 w-1/2 bg-white/10 rounded" />
@@ -223,23 +220,24 @@ export default function About() {
                                         repeat: Infinity,
                                         ease: "easeInOut",
                                     }}
-                                    className="absolute w-72 h-96 rounded-2xl bg-gradient-to-br from-orange-500/20 via-red-500/20 to-pink-500/20 backdrop-blur-xl border border-white/10 shadow-2xl"
+                                    className="absolute w-72 h-96 rounded-2xl overflow-hidden bg-linear-to-br from-orange-500/20 via-red-500/20 to-pink-500/20 backdrop-blur-xl border border-white/10 shadow-2xl"
                                     style={{
                                         transform: 'translateZ(100px) rotateY(15deg)',
                                         transformStyle: 'preserve-3d',
                                     }}
                                 >
-                                    <PixelatedCanvas
+                                    <img height={300} width={300} src="https://res.cloudinary.com/dotojp6xu/image/upload/v1752710778/3rs/exploits/WhatsApp_Image_2024-03-02_at_02.49.59_bec692ef_qaazgl.jpg" alt="" />
+                                    {/* <PixelatedCanvas
                                         src="https://res.cloudinary.com/dotojp6xu/image/upload/v1752710778/3rs/exploits/WhatsApp_Image_2024-03-02_at_02.49.59_bec692ef_qaazgl.jpg"
                                         width={300}
                                         height={400}
                                         cellSize={3}
-                                        dotScale={0.9}
+                                        dotScale={9}
                                         shape="square"
                                         backgroundColor="#000000"
                                         dropoutStrength={0.4}
                                         interactive
-                                        distortionStrength={3}
+                                        distortionStrength={0}
                                         distortionRadius={80}
                                         distortionMode="swirl"
                                         followSpeed={0.2}
@@ -249,8 +247,8 @@ export default function About() {
                                         tintColor="#FFFFFF"
                                         tintStrength={0.2}
                                         className="rounded-xl border border-neutral-800 shadow-lg"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-br from-orange-600/10 to-transparent rounded-2xl" />
+                                    /> */}
+                                    <div className="absolute inset-0 bg-linear-to-br from-orange-600/10 to-transparent rounded-2xl" />
                                 </motion.div>
 
                                 {/* Floating orb accent */}
@@ -264,7 +262,7 @@ export default function About() {
                                         repeat: Infinity,
                                         ease: "easeInOut",
                                     }}
-                                    className="absolute top-1/4 -right-8 w-32 h-32 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 opacity-30 blur-2xl"
+                                    className="absolute top-1/4 -right-8 w-32 h-32 rounded-full bg-linear-to-br from-purple-500 to-pink-500 opacity-30 blur-2xl"
                                 />
 
                                 <motion.div
@@ -277,7 +275,7 @@ export default function About() {
                                         repeat: Infinity,
                                         ease: "easeInOut",
                                     }}
-                                    className="absolute bottom-1/4 -left-8 w-40 h-40 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 opacity-20 blur-2xl"
+                                    className="absolute bottom-1/4 -left-8 w-40 h-40 rounded-full bg-linear-to-br from-blue-500 to-cyan-500 opacity-20 blur-2xl"
                                 />
                             </div>
                         </motion.div>
@@ -286,7 +284,7 @@ export default function About() {
             </div>
 
             {/* Bottom gradient fade */}
-            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+            <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-background to-transparent pointer-events-none" />
         </section>
     );
 }
