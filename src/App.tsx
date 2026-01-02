@@ -13,7 +13,7 @@ import { NavbarComp } from './components/Nav'
 
 function App() {
   return (
-    <div id='home' className="min-h-screen max-w-screen scroll-smooth">
+    <div id='home' className="min-h-screen max-w-screen w-screen scroll-smooth">
       <NavbarComp/>
       <Hero />
       <GitHubHeroSection username={'1rubiz'}/>

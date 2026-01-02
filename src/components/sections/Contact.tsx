@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion as framerMotion } from 'framer-motion';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Sun, Moon, Heart } from 'lucide-react';
+import { Mail, Github, Linkedin,
+	//  Sun, Moon, Heart
+	 } from 'lucide-react';
 
 export default function Contact() {
 const socials = [
@@ -9,18 +11,18 @@ const socials = [
 	{ name: 'LinkedIn', url: 'https://linkedin.com/in/izekor-ruby', icon: <Linkedin className="w-5 h-5" /> },
 ];
 
-	const [theme, setTheme] = useState<'light' | 'dark'>("light");
+	// const [theme, setTheme] = useState<'light' | 'dark'>("light");
 	const [form, setForm] = useState({ name: '', email: '', message: '' });
 	const [sent, setSent] = useState(false);
 	const [showModal, setShowModal] = useState(false);
 
-	function handleThemeToggle() {
-		setTheme(t => (t === 'light' ? 'dark' : 'light'));
-		document.documentElement.classList.toggle('dark');
-	}
+	// function handleThemeToggle() {
+	// 	setTheme(t => (t === 'light' ? 'dark' : 'light'));
+	// 	document.documentElement.classList.toggle('dark');
+	// }
 
 	function setDarkMode() {
-		setTheme('dark');
+		// setTheme('dark');
 		document.documentElement.classList.add('dark');
 	}
 
@@ -162,14 +164,14 @@ const socials = [
 					<span>Built with React, Vite, TailwindCSS</span>
 				</div>
 				<div className="flex items-center gap-3 justify-center">
-					<button
+					{/* <button
 						onClick={handleThemeToggle}
 						className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-muted/30 border border-border/30 hover:bg-muted/50 transition-all"
 						aria-label="Toggle theme"
 					>
 						{theme === 'light' ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />} Theme
-					</button>
-					<span className="flex items-center gap-1 text-xs opacity-70">Made with <Heart className="w-3 h-3 text-pink-500" /> by Ruby</span>
+					</button> */}
+					<span className="flex items-center gap-1 text-xs opacity-70">Made by Ruby Izekor</span>
 				</div>
 			</footer>
 		</section>

@@ -70,7 +70,7 @@ export default function About() {
         <section
             ref={sectionRef}
             id="about"
-            className="relative min-h-screen flex items-center py-24 px-6 overflow-hidden bg-linear-to-b from-background via-muted/10 to-background"
+            className="relative min-h-screen flex items-center py-12 md:py-24 px-6 overflow-hidden bg-linear-to-b from-background via-muted/10 to-background"
         >
             {/* Background decoration */}
             <div className="absolute inset-0 opacity-[0.02] pointer-events-none">

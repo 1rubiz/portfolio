@@ -74,7 +74,7 @@ export default function Projects() {
 	const others = projects.filter(p => !p.featured);
 
 	return (
-		<section id="experience" className="relative flex flex-col items-center py-24 px-6 bg-linear-to-b from-background via-muted/10 to-background">
+		<section id="experience" className="relative flex flex-col items-center py-12 md:py-24 px-6 bg-linear-to-b from-background via-muted/10 to-background">
 			<div className="max-w-5xl w-full mx-auto">
 				<div className="text-center mb-12">
 					<span className="inline-block px-4 py-2 rounded-full bg-muted/50 backdrop-blur-sm text-sm font-medium text-muted-foreground border border-border/50 mb-4">

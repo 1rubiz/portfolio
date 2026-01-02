@@ -61,7 +61,7 @@ export default function Skill() {
 		<section
 			ref={sectionRef}
 			id="skills"
-			className="relative flex flex-col items-center py-24 px-6 overflow-hidden bg-linear-to-b from-background via-muted/10 to-background"
+			className="relative flex flex-col items-center md:py-24 px-6 overflow-hidden bg-linear-to-b from-background via-muted/10 to-background"
 		>
 			<div className="max-w-5xl w-full mx-auto">
 				<div className="text-center mb-12">

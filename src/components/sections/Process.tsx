@@ -27,7 +27,7 @@ const processSteps = [
 
 export default function Process() {
 	return (
-		<section id="process" className="relative flex flex-col items-center py-24 px-6 bg-gradient-to-b from-background via-muted/10 to-background">
+		<section id="process" className="relative flex flex-col items-center py-12 md:py-24 px-6 bg-gradient-to-b from-background via-muted/10 to-background">
 			<div className="max-w-4xl w-full mx-auto">
 				<div className="text-center mb-12">
 					<span className="inline-block px-4 py-2 rounded-full bg-muted/50 backdrop-blur-sm text-sm font-medium text-muted-foreground border border-border/50 mb-4">
