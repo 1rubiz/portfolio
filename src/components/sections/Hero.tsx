@@ -67,7 +67,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black/[0.96] antialiased rounded-md">
+    <section className="relative max-w-screen min-h-screen flex items-center justify-center overflow-hidden bg-black/[0.96] antialiased rounded-md">
       {/* Grid background from original */}
       {/* <div
         className={cn(

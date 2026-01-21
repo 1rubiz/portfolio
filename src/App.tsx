@@ -1,4 +1,4 @@
-import Hero from './components/sections/Hero'
+// import Hero from './components/sections/Hero'
 import About from './components/sections/About'
 import './App.css'
 import Skill from './components/sections/Skill'
@@ -10,12 +10,14 @@ import { TimelineDemo } from './components/sections/TimeLine'
 import FAB from './components/FAB'
 import GitHubHeroSection from './components/sections/GithubHeroSection'
 import { NavbarComp } from './components/Nav'
+import Hero2 from './components/sections/Hero2'
 
 function App() {
   return (
-    <div id='home' className="min-h-screen max-w-screen w-screen scroll-smooth">
+    <div id='home' className="min-h-screen max-w-screen overflow-x-clip scroll-smooth">
       <NavbarComp/>
-      <Hero />
+      <Hero2/>
+      {/* <Hero /> */}
       <GitHubHeroSection username={'1rubiz'}/>
       <About />
       <Skill/>
