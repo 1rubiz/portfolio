@@ -6,7 +6,7 @@ function FAB() {
   return (
     <div className=" md:hidden fab fab-flower">
         {/* a focusable div with tabIndex is necessary to work on all browsers. role="button" is necessary for accessibility */}
-        <div tabIndex={0} role="button" className="btn btn-lg btn-info btn-circle"><IconMenu3 /></div>
+        <div tabIndex={0} role="button" className="btn btn-lg bg-white btn-info btn-circle"><IconMenu3 /></div>
 
         {/* Main Action button replaces the original button when FAB is open */}
         <div className="fab-close">

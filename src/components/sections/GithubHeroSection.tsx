@@ -264,9 +264,6 @@ const GitHubHeroSection: React.FC<GitHubHeroSectionProps> = ({ username, showAch
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-900 via-black to-gray-900 text-white p-4 md:p-8">
       <motion.div
-        // variants={containerVariants}
-        initial="hidden"
-        animate="visible"
         className="max-w-7xl mx-auto"
       >
         {/* Profile Header */}
