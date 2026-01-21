@@ -1,4 +1,3 @@
-import { Spotlight } from "../ui/spotlight"
 
 function Hero2() {
   return (
