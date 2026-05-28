@@ -10,23 +10,29 @@ import { TimelineDemo } from './components/sections/TimeLine'
 import FAB from './components/FAB'
 import GitHubHeroSection from './components/sections/GithubHeroSection'
 import { NavbarComp } from './components/Nav'
-import Hero2 from './components/sections/Hero2'
+import Hero3 from './components/sections/Hero3'
+import TesseractHero from './components/sections/Animation'
+import LoadingScreen from './components/LoadingScreen'
 
 function App() {
   return (
-    <div id='home' className="min-h-screen max-w-screen overflow-x-clip scroll-smooth">
-      <NavbarComp/>
-      <Hero2/>
-      {/* <Hero /> */}
-      <GitHubHeroSection username={'1rubiz'}/>
-      <About />
-      <Skill/>
-      <Projects/>
-      <Process/>
-      <TimelineDemo/>
-      <Contact/>
-      <FAB/>
-    </div>
+    <>
+      <LoadingScreen />
+      <div id='home' className="min-h-screen max-w-screen overflow-x-clip scroll-smooth">
+        <NavbarComp />
+        <Hero3 />
+        {/* <Hero2 /> */}
+        {/* <Hero /> */}
+        <GitHubHeroSection username={'1rubiz'} />
+        <About />
+        <Skill />
+        <Projects />
+        <Process />
+        <TimelineDemo />
+        <Contact />
+        <FAB />
+      </div>
+    </>
   )
 }
 

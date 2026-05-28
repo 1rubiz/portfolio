@@ -5,11 +5,11 @@ function Hero2() {
         <img src="/home.png" alt="" className="" />
         {/* <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="white" /> */}
         <div className="absolute gap-4 top-10 md:top-4 md:bottom-6 w-full flex flex-col md:flex-row p-6 md:items-end justify-between">
-            <div className="text-8xl md:text-9xl font-extrabold font-serif space-y-2">
+            <div className="text-8xl md:text-9xl font-extrabold font-serif space-y-2 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
                 <h1>RUBY</h1>
                 <h1>IZEKOR</h1>
             </div>
-            <div className="text-4xl">
+            <div className="text-4xl bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
                 <h1>Software Engineer</h1>
                 <h3>CTO Justpostam.com</h3>
             </div>
