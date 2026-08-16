@@ -289,12 +289,12 @@ export default function Hero3() {
       </div>
 
       {/* ── Top bar / Nav hint ── */}
-      <div className="relative z-10 flex justify-end p-6 md:p-8">
+      {/*<div className="relative z-10 flex justify-end p-6 md:p-8">
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={mounted ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex items-center gap-3"
+          className="flex items-center gap-3 bg-red-600"
         >
           <div
             className="w-2 h-2 rounded-full animate-pulse"
@@ -307,7 +307,7 @@ export default function Hero3() {
             Available for work
           </span>
         </motion.div>
-      </div>
+      </div>*/}
 
       {/* ── Centre: Terminal ── */}
       <div className="relative z-10 flex-1 flex items-center justify-center px-6 py-8 md:py-0">
