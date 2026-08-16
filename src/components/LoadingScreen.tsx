@@ -78,7 +78,7 @@ export default function LoadingScreen() {
               className="text-5xl md:text-7xl font-serif font-extrabold tracking-tight bg-clip-text text-transparent"
               style={{
                 backgroundImage:
-                  "linear-gradient(135deg, #e2e8f0 0%, #a78bfa 50%, #38bdf8 100%)",
+                  "linear-gradient(135deg, #e2e8f0 0%, #43a047 50%, #43a047 100%)",
               }}
             >
               RI
@@ -125,8 +125,8 @@ export default function LoadingScreen() {
                 Loading portfolio…
               </span>
               <span
-                className="text-xs font-mono"
-                style={{ color: "rgba(148, 163, 184, 0.6)" }}
+                className="text-xs font-mono text-green-600"
+                // style={{ color: "rgba(148, 163, 184, 0.6)" }}
               >
                 {Math.round(progress)}%
               </span>

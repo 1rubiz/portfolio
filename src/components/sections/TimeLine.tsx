@@ -1,6 +1,6 @@
 import { Timeline } from "@/components/ui/timeline";
 import { Link } from "lucide-react";
- 
+
 export function TimelineDemo() {
 
   const data = [
@@ -27,6 +27,37 @@ export function TimelineDemo() {
             <img
               src="https://res.cloudinary.com/dotojp6xu/image/upload/v1767308975/portfolio/iPhone-13-PRO-weeshr.com_hh8yn0.png"
               alt="Weeshr mobile"
+              width={500}
+              height={500}
+              className="h-20 w-fit rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Rubiz Escrow",
+      content: (
+        <div>
+          <div className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            <a href="https://weesshr.com" className="text-blue-500 hover:underline">
+              <span className="flex text-blue-500 items-center gap-4">
+                <span>https://rubiz-escrow.vercel.app/</span>
+                <Link className="h-4 w-4" />
+              </span>
+            </a>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://res.cloudinary.com/dotojp6xu/image/upload/v1786901230/Macbook-Air-rubiz-escrow.vercel.app_uimjn3.png"
+              alt="Escrow desktop view"
+              width={500}
+              height={500}
+              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
+            />
+            <img
+              src="https://res.cloudinary.com/dotojp6xu/image/upload/v1786901242/iPhone-14-PRO-rubiz-escrow.vercel.app_bgosjz.png"
+              alt="Escrow mobile"
               width={500}
               height={500}
               className="h-20 w-fit rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),0_1px_1px_rgba(0,0,0,0.05),0_0_0_1px_rgba(34,42,53,0.04),0_0_4px_rgba(34,42,53,0.08),0_16px_68px_rgba(47,48,55,0.05),0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"

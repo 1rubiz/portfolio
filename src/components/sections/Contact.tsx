@@ -62,7 +62,7 @@ const socials = [
 				</h2>
 				<p className="text-lg text-muted-foreground mb-6">I’d love to hear from you. Reach out for work, collaboration, or just to say hi!</p>
 				<motion.a
-					href="mailto:your@email.com"
+					href="mailto:1izekorruby@gmail.com"
 					whileHover={{ scale: 1.04 }}
 					className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-foreground text-background font-medium shadow-md transition-all hover:shadow-lg hover:bg-purple-600/90 focus:outline-none mb-4"
 				>
